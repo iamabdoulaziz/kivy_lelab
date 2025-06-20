@@ -15,12 +15,14 @@ from kivy.uix.button import Button
 class WidgetsExemple(GridLayout):
     my_text = StringProperty("Hey !")
     conter = 0
+    conter_actived = False
 
     def on_button_click(self):
         print("Button click")
         # self.my_text = "Hello"
-        self.conter = self.conter + 1
-        self.my_text = str(self.conter)
+        if self.conter_actived is True:
+            self.conter = self.conter + 1
+            self.my_text = str(self.conter)
 
 
     def on_toggle_button_state(self, widget):
@@ -28,9 +30,11 @@ class WidgetsExemple(GridLayout):
         if widget.state == "normal":
             print("OFF")
             widget.text = "OFF"
+            self.conter_actived = False
         else:
             print("ON")
             widget.text = "ON"
+            self.conter_actived = True
 
 
 
