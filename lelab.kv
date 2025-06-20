@@ -10,8 +10,9 @@ WidgetsExemple:
         widht: "100dp"
 
     Button:
-        text: "Cliquez"
+        text: "Compter"
         on_press: root.on_button_click()
+        disabled: not root.conter_actived
     Label:
         text: root.my_text
         font_name: "fonts/Lcd.ttf"
