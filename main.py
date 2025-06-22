@@ -17,6 +17,7 @@ class WidgetsExemple(GridLayout):
     conter = 0
     conter_actived = BooleanProperty(False)
     # slider_value_txt = StringProperty("Slider ")
+    text_input_str = StringProperty("Cute boy")
 
     def on_button_click(self):
         print("Button click")
@@ -44,6 +45,8 @@ class WidgetsExemple(GridLayout):
         # print(f"Slider: {str(int(widget.value))}")
         # self.slider_value_txt = str(int(widget.value))
 
+    def on_text_validate(self, widget):
+        self.text_input_str = widget.text
 
 
 
