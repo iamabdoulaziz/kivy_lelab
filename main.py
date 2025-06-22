@@ -16,6 +16,7 @@ class WidgetsExemple(GridLayout):
     my_text = StringProperty("Hey !")
     conter = 0
     conter_actived = BooleanProperty(False)
+    # slider_value_txt = StringProperty("Slider ")
 
     def on_button_click(self):
         print("Button click")
@@ -35,6 +36,14 @@ class WidgetsExemple(GridLayout):
             print("ON")
             widget.text = "ON"
             self.conter_actived = True
+
+    def on_switch_activate(self, widget):
+        print(f"Switch: {str(widget.active)}")
+
+    # def on_slider_value(self, widget):
+        # print(f"Slider: {str(int(widget.value))}")
+        # self.slider_value_txt = str(int(widget.value))
+
 
 
 
