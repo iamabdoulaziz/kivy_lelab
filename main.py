@@ -1,8 +1,8 @@
 from kivy.app import App
 from kivy.properties import ObjectProperty
 #from kivy.uix.gridlayout import GridLayout
-from kivy.uix.widget import Widget
-
+# from kivy.uix.widget import Widget
+from canvas_exemples import *
 from navigation_screen_manager import NavigationScreenMangager
 
 
@@ -14,6 +14,7 @@ class LeLabApp(App):
 
     def build(self):
         self.manager = MyScreenManager()
-        return self.manager
+        # return self.manager
+        return CanvasExemple3()
 
 LeLabApp().run()
