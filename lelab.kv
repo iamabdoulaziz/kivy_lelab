@@ -2,6 +2,7 @@
 #: import widget_exemples widget_exemples
 #: import navigation_screen_manager navigation_screen_manager
 #: import box_layout_with_action_bar box_layout_with_action_bar
+#: import canvas_exemples canvas_exemples
 
 <MenuPrincipal@BoxLayout>:
     orientation: "vertical"
@@ -16,6 +17,9 @@
     Button:
         text : "Images"
         on_press: app.manager.push("ImagesExemple")
+    Button:
+        text : "Canvas"
+        on_press: app.manager.push("CanvasExemple")
 
 <MyScreenManager>:
     Screen:
@@ -36,3 +40,8 @@
         BoxLayoutWithActionBar:
             title: "Images"
             ImagesExemple:
+    Screen:
+        name: "CanvasExemple"
+        BoxLayoutWithActionBar:
+            title: "Canvas"
+            CanvasExemple:
